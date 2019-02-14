@@ -29,7 +29,8 @@ sudo automate-ctl create-user default $1 --password $5
 sudo chef-server-ctl user-create $1 $2 $3 $4 $5 --filename /etc/opscode/$1.pem
 
 sudo chef-server-ctl org-create $6 "New Org" -a $1 --filename /etc/opscode/$6-validator.pem
-sudo hostname  $(hostname -I)
+ pip=$(curl ifconfig.co)
+sudo hostname $pip
 sudo chef-server-ctl reconfigure
 sudo chef-server-ctl install chef-manage 
 sudo chef-server-ctl reconfigure 
