@@ -14,7 +14,7 @@ orguser=$6
 
 ##Chef-Automate Upgrade
 
-chef-marketplace-ctl upgrade -y
+#chef-marketplace-ctl upgrade -y
 
 sudo chef-server-ctl reconfigure
 
