@@ -29,3 +29,7 @@ sudo automate-ctl create-user default $1 --password $5
 sudo chef-server-ctl user-create $1 $2 $3 $4 $5 > /etc/opscode/$1.pem
 
 sudo chef-server-ctl org-create $6 "New Org" -a $1 > /etc/opscode/$6-validator.pem
+sudo chef-manage-ctl reconfigure --accept-license
+sudo apt-get update
+sudo apt-get install -y firewalld
+sudo service firewalld stop
