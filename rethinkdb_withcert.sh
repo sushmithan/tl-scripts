@@ -12,7 +12,8 @@ sudo apt-get install libprotobuf-dev libcurl4-openssl-dev -y
 sudo apt-get install libboost-all-dev libncurses5-dev -y
 sudo apt-get install libjemalloc-dev wget m4 -y
 sudo apt install python-pip -y
-pip install rethinkdb
+#pip install rethinkdb
+ pip install rethinkdb==2.3.0.post6
 pip install --upgrade pip
 
 
@@ -32,7 +33,7 @@ cd /etc/rethinkdb/instances.d
 sudo mkdir rethinkdb_data
 sudo chmod 775 rethinkdb_data
 #cd rethinkdb_data
-#sudo sopenssl genrsa -out key.pem 2048
+#sudo openssl genrsa -out key.pem 2048
 #sudo openssl req -new -x509 -key key.pem -out cert.pem -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=example.com"
 #sudo chmod 775 key.pem
 #sudo chmod 775 cert.pem
