@@ -32,9 +32,9 @@ sudo update-rc.d rethinkdb enable
 cd /etc/rethinkdb/instances.d
 sudo mkdir rethinkdb_data
 sudo chmod 775 rethinkdb_data
-#cd rethinkdb_data
-#sudo openssl genrsa -out key.pem 2048
-#sudo openssl req -new -x509 -key key.pem -out cert.pem -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=example.com"
-#sudo chmod 775 key.pem
-#sudo chmod 775 cert.pem
-#sudo rethinkdb --http-tls-key key.pem --http-tls-cert cert.pem
+cd rethinkdb_data
+sudo openssl genrsa -out key.pem 2048
+sudo openssl req -new -x509 -key key.pem -out cert.pem -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=example.com"
+sudo chmod 775 key.pem
+sudo chmod 775 cert.pem
+sudo rethinkdb --http-tls-key key.pem --http-tls-cert cert.pem
